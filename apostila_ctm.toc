@@ -1,0 +1,15 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{Dedication}{i}{}%
+\contentsline {chapter}{Copyright}{iii}{}%
+\contentsline {chapter}{Acknowledgements}{v}{}%
+\contentsline {part}{I\hspace {1em}Noções de Metrologia Elétrica}{1}{}%
+\contentsline {chapter}{\numberline {1}Introdução}{3}{}%
+\contentsline {chapter}{\numberline {2}Padronização}{5}{}%
+\contentsline {section}{\numberline {2.1}Resistência Elétrica}{5}{}%
+\contentsline {section}{\numberline {2.2}Capacitância e Indutância}{5}{}%
+\contentsline {section}{\numberline {2.3}Tensão Elétrica}{5}{}%
+\contentsline {section}{\numberline {2.4}Transferência AC-DC}{5}{}%
+\contentsline {chapter}{\numberline {3}Calibração de Medidores e Fontes}{7}{}%
+\contentsline {chapter}{\numberline {A}First and only appendix}{9}{}%
+\contentsline {chapter}{Bibliography}{11}{}%
+\contentsline {chapter}{Other titles in this collection}{13}{}%

@@ -1,0 +1,64 @@
+% Book document class
+\documentclass{book}
+\usepackage[a4paper,left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm]{geometry}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\title{Metrologia Elétrica}
+\author{Gean Marcos Geronymo}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\chapter{Dedication}
+\chapter{Copyright}
+\chapter{Acknowledgements}
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+\mainmatter
+\part{Noções de Metrologia Elétrica}
+% segundo a ementa preliminar são 9 aulas para a parte I - noções de Metrologia Elétrica
+
+
+\chapter{Introdução}
+% falar sobre a estrutura da Diele, laboratórios, etc.
+\chapter{Padronização}
+\section{Resistência Elétrica}
+
+Segundo a Lei de Ohm, a resistência elétrica $\mathrm{R}$ de um condutor, em ohms ($\mathrm{\Omega}$), é a razão da diferença de potencial $\mathrm{V}$, em volts (V), aplicada a esse condutor, e da corrente elétrica $\mathrm{I}$ em amperes (A) fluindo através do mesmo condutor:
+\begin{equation}
+\mathrm{R} = \dfrac{\mathrm{V}}{\mathrm{I}}
+\end{equation}
+
+A resistência elétrica também pode ser determinada em função das características do material, através da equação:
+\begin{equation}
+  \mathrm{R} = \rho \cdot \dfrac{l}{A}
+\end{equation}
+onde $\rho$ é a resistividade elétrica do condutor, em ohm-metro ($\mathrm{\Omega} \cdot \mathrm{m}$), $l$ é o comprimento do condutor, em metros, e $A$ é área da seção transversal do condutor, em metros quadrados.
+
+Entretanto, experimentos mais precisos mostram que a resistência elétrica também é função da temperatura e até mesmo da presença de tensão mecânica no condutor. Com base nesses fenômenos, foram desenvolvidos trandutores\footnote{Transdutor é um dispositivo utilizado em conversão de energia de uma natureza para outra. São muito utilizados para converter grandezas como posição, velocidade, temperatura, luz, pressão, etc. em sinais elétricos.} para a medição de temperatura, pequenos deslocamentos, pressão em líquidos, dentre outros. Além disso, a corrente elétrica, que é uma grandeza de base do SI, normalmente é medida através da diferença de potencial em um resistor conhecido. De fato, uma grande parte das grandezas elétricas é medida usando métodos que envolvem de alguma forma a medição de resistência.
+
+\section{Capacitância e Indutância}
+\section{Tensão Elétrica}
+\section{Transferência AC-DC}
+\chapter{Calibração de Medidores e Fontes}
+
+
+\appendix
+\chapter{First and only appendix}
+
+\backmatter
+\chapter{Bibliography}
+\chapter{Other titles in this collection}
+
+\end{document}
