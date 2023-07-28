@@ -2,10 +2,13 @@
 \documentclass{book}
 \usepackage[a4paper,left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.5cm]{geometry}
 \usepackage[brazil]{babel}
+\usepackage{babelbib}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{textgreek}
 
 \title{Metrologia Elétrica}
 \author{Gean Marcos Geronymo}
@@ -16,9 +19,9 @@
 \maketitle
 
 \frontmatter
-\chapter{Dedication}
-\chapter{Copyright}
-\chapter{Acknowledgements}
+%\chapter{Dedication}
+%\chapter{Copyright}
+%\chapter{Acknowledgements}
 
 \tableofcontents
 
@@ -32,6 +35,100 @@
 
 \chapter{Introdução}
 % falar sobre a estrutura da Diele, laboratórios, etc.
+
+\section{Sistema Internacional de Unidades - SI}
+O Sistema Internacional de Unidades (SI)~\cite{si-brochure,si-ptbr} é a base da metrologia moderna. Antes da redefinição em 2019, o SI era definido através de sete unidades de base, a partir das quais as unidades derivadas eram obtidas através de operações matemáticas de multiplicação e potenciação, combinando as unidades de base. Após a redefinição do SI, com a fixação dos valores numéricos de sete constantes definidoras, em princípio essa distinção não é mais necessária, já que tanto as unidades de base quanto as unidades derivadas podem ser expressas diretamente em função das constantes definidoras. Entretanto, o conceito de unidades base e unidades derivadas foi mantido por razões históricas e por compatibilidade com normas estabelecidas.
+
+% falar das constantes definidoras
+
+A definição formal do SI desde 2019~\cite{si-brochure,si-ptbr} é baseada em sete constantes definidoras, apresentadas na \tablename~\ref{tab:si_cte}. O valor numérico das constantes definidoras possui incerteza nula. As unidades das constantes definidoras, hertz (Hz), joule (J), coulomb (C), lumen (lm) e watt (W) são relacionadas às unidades de base (ver \tablename~\ref{tab:si_base}) segundo (s), metro (m), kilograma (kg), ampere (A), kelvin (K), mole (mol) e candela (cd) de acordo com:
+\begin{itemize}
+\item Hz = s\textsuperscript{-1}
+\item J = kg m\textsuperscript{2}s\textsuperscript{-2}
+\item C = A s
+\item lm = cd m\textsuperscript{2} m\textsubscript{-2} = cd sr (onde sr é o ângulo sólido)
+  \item W = m\textsuperscript{2}s\textsuperscript{-3}
+\end{itemize}
+
+\begin{table}[!ht]
+\centering
+\caption{Constantes definidoras do SI.}
+\begin{tabular}{cccc}
+  \toprule[.8pt]
+  Constante & Símbolo & Valor numérico & Unidade \\
+  \midrule[.5pt]
+  frequência de transição hiperfina do Cs & $\Delta \nu_{Cs}$ & 9 192 631 770 & Hz \\
+  velocidade da luz no vácuo & $c$ & 299 792 458 & m s\textsuperscript{-1} \\
+  constante de Planck & $h$ & $6,626~070~15 \times 10^{-34} $ & J s \\
+  carga elementar & $e$ & $1,602~176~634 \times 10^{-19}$ & C \\
+  constante de Boltzmann & $k$ & $1,380~649 \times 10^{-23} $ & J K\textsuperscript{-1} \\
+  constante de Avogadro & $N_A$ & $6,022~140~76 \times 10^{23} $ & mol \textsuperscript{-1} \\
+  eficácia luminosa & $K_{cd}$ & 683 & lm W\textsuperscript{-1} \\
+  \bottomrule[.8pt]
+\end{tabular}
+\label{tab:si_cte}
+\end{table}
+
+% falar das unidades de base
+
+\begin{table}[!ht]
+\centering
+\caption{Unidades de base do SI.}
+\begin{tabular}{ccc}
+  \toprule[.8pt]
+  Grandeza & Unidade & Símbolo \\
+  \midrule[.5pt]
+  tempo & segundo & s \\
+  comprimento & metro & m \\
+  massa & kilograma & kg \\
+  corrente elétrica & ampere & A \\
+  temperatura termodinâmica & kelvin & K \\
+  quantidade de matéria & mole & mol \\
+  intensidade luminosa & candela & cd \\
+  \bottomrule[.8pt]
+\end{tabular}
+\label{tab:si_base}
+\end{table}
+
+
+
+% falar das unidades derivadas -> unidades elétricas
+
+
+A \tablename~\ref{tab:mult_factors} apresenta os fatores de multiplicação das unidades do SI. Os fatores de multiplicação mais utilizados em Metrologia Elétrica estão destacados em negrito.
+
+\begin{table}[!ht]
+\centering
+\caption{Fatores de multiplicação.}
+\begin{tabular}{ccc}
+  \toprule[.8pt]
+  \textbf{Fator} & \textbf{Nome} & \textbf{Símbolo} \\
+  \midrule[.5pt]
+  10\textsuperscript{24} & yotta & Y \\
+  10\textsuperscript{21} & zeta & Z \\
+  10\textsuperscript{18} & exa & E \\
+  10\textsuperscript{15} & peta & P \\
+  \textbf{10\textsuperscript{12}} & \textbf{tera} & \textbf{T} \\
+  \textbf{10\textsuperscript{9}} & \textbf{giga} & \textbf{G} \\
+  \textbf{10\textsuperscript{6}} & \textbf{mega} & \textbf{M} \\
+  \textbf{10\textsuperscript{3}} & \textbf{kilo} & \textbf{k} \\
+  10\textsuperscript{2} & hecto & h \\
+  10\textsuperscript{1} & deka & da \\
+  10\textsuperscript{-1} & deci & d \\
+  10\textsuperscript{-2} & centi & c \\
+  \textbf{10\textsuperscript{-3}} & \textbf{mili} & \textbf{m} \\
+  \textbf{10\textsuperscript{-6}} & \textbf{micro} & \textbf{\textmu} \\
+  \textbf{10\textsuperscript{-9}} & \textbf{nano} & \textbf{n} \\
+  \textbf{10\textsuperscript{-12}} & \textbf{pico} & \textbf{p} \\
+  10\textsuperscript{-15} & femto & f \\
+  10\textsuperscript{-18} & atto & a \\
+  10\textsuperscript{-21} & zepto & z \\
+  10\textsuperscript{-24} & yocto & y \\
+  \bottomrule[.8pt]
+\end{tabular}
+\label{tab:mult_factors}
+\end{table}
+
 \chapter{Padronização}
 \section{Resistência Elétrica}
 
@@ -46,7 +143,7 @@ A resistência elétrica também pode ser determinada em função das caracterí
 \end{equation}
 onde $\rho$ é a resistividade elétrica do condutor, em ohm-metro ($\mathrm{\Omega} \cdot \mathrm{m}$), $l$ é o comprimento do condutor, em metros, e $A$ é área da seção transversal do condutor, em metros quadrados.
 
-Entretanto, experimentos mais precisos mostram que a resistência elétrica também é função da temperatura e até mesmo da presença de tensão mecânica no condutor. Com base nesses fenômenos, foram desenvolvidos trandutores\footnote{Transdutor é um dispositivo utilizado em conversão de energia de uma natureza para outra. São muito utilizados para converter grandezas como posição, velocidade, temperatura, luz, pressão, etc. em sinais elétricos.} para a medição de temperatura, pequenos deslocamentos, pressão em líquidos, dentre outros. Além disso, a corrente elétrica, que é uma grandeza de base do SI, normalmente é medida através da diferença de potencial em um resistor conhecido. De fato, uma grande parte das grandezas elétricas é medida usando métodos que envolvem de alguma forma a medição de resistência.
+Entretanto, experimentos mais precisos mostram que a resistência elétrica também é função da temperatura e até mesmo da presença de tensão mecânica no condutor~\cite{fluke}. Com base nesses fenômenos, foram desenvolvidos trandutores\footnote{Transdutor é um dispositivo utilizado em conversão de energia de uma natureza para outra. São muito utilizados para converter grandezas como posição, velocidade, temperatura, luz, pressão, etc. em sinais elétricos.} para a medição de temperatura, pequenos deslocamentos, pressão em líquidos, dentre outros. Além disso, a corrente elétrica, que é uma grandeza de base do SI, normalmente é medida através da diferença de potencial em um resistor conhecido. De fato, uma grande parte das grandezas elétricas é medida usando métodos que envolvem de alguma forma a medição de resistência.
 
 \section{Capacitância e Indutância}
 
@@ -61,8 +158,11 @@ Entretanto, experimentos mais precisos mostram que a resistência elétrica tamb
 %\chapter{First and only appendix}
 
 \backmatter
-\chapter{Bibliografia}
+%\chapter{Bibliografia}
 % incluir fluke calibration philosophy in practice
 %\chapter{Other titles in this collection}
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliografia}
 
 \end{document}
